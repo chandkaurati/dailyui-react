@@ -6,7 +6,7 @@ interface NavbarProps {
   isSidebarOpen: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ toggleSidebar, isSidebarOpen }) => {
+const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
   return (
     <nav className="navbar">
       <div className="navbar-content">
