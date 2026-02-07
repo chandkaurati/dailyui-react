@@ -4,6 +4,7 @@ import Sidebar from "./components/Layout/Sidebar";
 import MainContent from "./components/Layout/MainContent";
 import Footer from "./components/Layout/Footer";
 import "./App.css";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -17,22 +18,14 @@ function App() {
     <div className="app">
       {/* Fixed Navbar at top */}
       <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
-
-      {/* Main container with sidebar and content */}
-      <div className="app-body">
+      <main className="app-body">
         <Sidebar
           isOpen={isSidebarOpen}
           selectedComponent={selectedComponent}
           setSelectedComponent={setSelectedComponent}
         />
-
-        <MainContent
-          isSidebarOpen={isSidebarOpen}
-          selectedComponent={selectedComponent}
-        />
-      </div>
-
-      {/* Fixed Footer at bottom */}
+        <MainContent>{<Outlet />}</MainContent>
+      </main>
       <Footer />
     </div>
   );

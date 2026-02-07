@@ -40,13 +40,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
-}
-
 .app-body {
   display: flex;
   flex: 1;
@@ -54,6 +47,14 @@ body {
   margin-bottom: var(--footer-height);
   overflow: hidden;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
 
 .container {
   max-width: 1200px;
